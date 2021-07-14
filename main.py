@@ -94,7 +94,7 @@ state_info = {
 province_info = {
     'Quebec': 'Quebec City',
     'Ontario': 'Toronto',
-    'Newfoundland and Labrador': "St.John's",
+    'Newfoundland and Labrador': "St.Johns",
     'P.E.I.': 'Charlottetown',
     'New Brunswick': 'Fredericton',
     'Nova Scotia': 'Halifax',
@@ -103,7 +103,7 @@ province_info = {
     'Alberta': 'Edmonton',
     'British Colombia': 'Victoria',
     'Yukon': 'Yellowknife',
-    'N.W.T.': 'White Horse',
+    'N.W.T.': 'Whitehorse',
     'Nunavut': 'Iqaluit'
 }
 
@@ -111,16 +111,26 @@ province_info = {
 # Intro
 print("Welcome To The U.S. States and Canadian Provinces Quiz!\n")
 print("You will be tested on your knowledge of states, provinces, and their capital city")
-selection = input("Would you like to study state capitals or provincial capitals? [S|P] : ")
 # Selection Menu
-if selection.title() in "S":
-    print("\nLet's Begin!\n")
-    us_states()
-elif selection.title() in "P":
-    print("\nLet's Begin!\n")
-    provinces()
-else:
-    print("Error: Invalid Entry.\nPlease try again")
+
+while True:
+    try:
+        selection = input("Would you like to study state capitals or provincial capitals? [S|P] : ")
+
+
+    except:
+        print("Error: Invalid Entry.\nPlease try again")
+
+
+    else:
+        if selection.title() in "S":
+            print("\nLet's Begin!\n")
+            us_states()
+        elif selection.title() in "P":
+            print("\nLet's Begin!\n")
+            provinces()
+        else:
+            print("Error: Invalid Entry.\nPlease try again")
 
 
 
