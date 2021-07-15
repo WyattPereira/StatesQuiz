@@ -129,9 +129,11 @@ while True:
         if selection.title() in "S":
             print("\nLet's Begin!\n")
             us_states()
+            break
         elif selection.title() in "P":
             print("\nLet's Begin!\n")
             provinces()
+            break
         else:
             print("Error: Invalid Entry.\nPlease try again")
 
