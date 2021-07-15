@@ -1,4 +1,7 @@
-# US States Quiz
+# US States and Canadian Provinces Quiz
+# Started on 13/July/2021
+# Finished on 14/July/2021
+# Made by Wyatt Pereira
 import numpy
 
 
@@ -10,7 +13,7 @@ def provinces():
         new_prov_dict = dict(dict_prov_list)
         for key,value in new_prov_dict.items():
             y = input(f"What is the capital of {key}?: ")
-            if y.title() == province_info[key]:
+            if y.capitalize() == province_info[key].capitalize():
                 print("Correct!")
                 score_2 += 1
             else:
@@ -28,7 +31,7 @@ def us_states():
         new_dict = dict(dict_list)
         for key,value in new_dict.items():
             x = input(f"What is the capital of {key}?: ")
-            if x.title() == state_info[key]:
+            if x.capitalize() == state_info[key].capitalize():
                 print("Correct!")
                 score += 1
             else:
@@ -94,7 +97,7 @@ state_info = {
 province_info = {
     'Quebec': 'Quebec City',
     'Ontario': 'Toronto',
-    'Newfoundland and Labrador': "St.Johns",
+    "Newfoundland and Labrador": "St.John's",
     'P.E.I.': 'Charlottetown',
     'New Brunswick': 'Fredericton',
     'Nova Scotia': 'Halifax',
